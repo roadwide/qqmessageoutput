@@ -11,7 +11,9 @@ for msg in test:
     print(msg)
 ```
 
-获取db文件首先手机要root
+获取db文件手机最好要root。但是当初经过我不屑的探索，没有root也不是没有办法。
+
+获取db文件的方法请移步我写的文章：[安卓QQ聊天记录导出、备份完全攻略](https://www.cnblogs.com/roadwide/p/11220211.html)
 
 ```
 data\data\com.tencent.mobileqq\databases\你的QQ.db
