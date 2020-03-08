@@ -5,7 +5,7 @@ import time
 
 
 class QQoutput():
-    def __init__(self,db,key):
+    def __init__(self,db,key,mode):
         self.key=key    #解密用的密钥
         self.c=sqlite3.connect(db).cursor()
         
@@ -80,3 +80,19 @@ class QQoutput():
                 f2.write("</br></br>")               
             except:
                 pass
+
+#config
+#储存QQ聊天信息的db文件，以你的QQ号命名
+dbfile='yourdb.db'
+#解密的key
+key=''
+#导出模式，1是好友，2是群
+mode=1
+#导出的聊天对象
+yourfriendqq=123456
+
+q=QQoutput(dbfile,key,mode)
+test=q.message(yourfriendqq,mode)
+q.output(yourfriendqq,mode)
+for msg in test:
+    print(msg)
