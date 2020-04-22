@@ -1,15 +1,18 @@
 # qqmessageoutput
 安卓QQ聊天记录导出/安卓QQ数据库解密
 
-[2019-10-02]新增了QQ群的消息记录导出，mode=1是好友，2是群
+# Usage
 
 ```python
-q=QQoutput('yourdb.db','yourkey',mode)
-test=q.message(yourfriendqq,mode)
-q.output(yourfriendqq,mode)
-for msg in test:
-    print(msg)
+# 初始化
+q = QQoutput(dbfile, key)
+# 获得所有好友的个人资料
+q.getAllMyFriends()
+# 导出聊天记录
+q.output(yourfriendqq, mode)
 ```
+
+# Tips
 
 获取db文件手机最好要root。但是当初经过我不屑的探索，没有root也不是没有办法。
 
@@ -34,3 +37,15 @@ yourkey是解密的密钥，一般是手机序列号，拨号键盘下输入*#06
 **刚刚发现，QQ竟然支持手机聊天记录备份了！！！**
 
 ![QQmsg](./QQmsg.png)
+
+# Update
+
+[2019-10-02]新增了QQ群的消息记录导出，mode=1是好友，2是群
+
+[2020-04-22]增加导出所有好友个人资料功能，优化代码（以前写的代码冗余太多，~~太烂了~~）
+
+# ToDo
+
+- [ ] 自行解密key功能
+- [ ] 导出的聊天记录用不同颜色区分是“你”说的，还是“我”说的
+- [ ] 导出的聊天记录用QQ-昵称-备注这样的形式，增加辨识度
