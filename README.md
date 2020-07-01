@@ -50,6 +50,8 @@ data\data\com.tencent.mobileqq\files\kc
 
 [2020-04-22]增加导出所有好友个人资料功能，优化代码（以前写的代码冗余太多，~~太烂了~~）
 
+[2020-07-01]增加可能的其他解密key，感谢@[howyay](https://github.com/howyay)提供
+
 # ToDo
 
 - [ ] 自行解密key功能
