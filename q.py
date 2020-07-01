@@ -86,15 +86,16 @@ class QQoutput():
         # uin-QQ号，remark-备注，name-昵称
         execute = "select uin,remark,name from Friends"
         cursor = self.c.execute(execute)
-        for i in cursor:
-            uin, remark, name = i[0], i[1], i[2]
+        with open("FriendsData.txt", "w+", encoding="utf-8") as f:
+            for i in cursor:
+                uin, remark, name = i[0], i[1], i[2]
 
-            decode_uin = self.fix(uin, 1)
-            decode_remark = self.fix(remark, 1)
-            decode_name = self.fix(name, 1)
-            with open("FriendsData.txt", "a+", encoding="utf-8") as f:
+                decode_uin = self.fix(uin, 1)
+                decode_remark = self.fix(remark, 1)
+                decode_name = self.fix(name, 1)
+
                 print("QQ:{}\t备注:{}\t昵称:{}".format(decode_uin, decode_remark, decode_name), file=f)
-            FriendsData.append([decode_uin, decode_remark, decode_name])
+                FriendsData.append([decode_uin, decode_remark, decode_name])
         return FriendsData
 
 

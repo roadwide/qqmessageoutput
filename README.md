@@ -28,7 +28,13 @@ data\data\com.tencent.mobileqq\databases\你的QQ.db
 data\data\com.tencent.mobileqq\databases\slowtable_你的QQ.db
 ```
 
-yourkey是解密的密钥，一般是手机序列号，拨号键盘下输入*#06#
+yourkey是解密的密钥，一般是手机序列号，拨号键盘下输入`*#06#`
+
+部分新版qq的解密密钥则可能位于以下文件中
+
+```
+data\data\com.tencent.mobileqq\files\kc
+```
 
 手机QQ的db文件加密方式是异或加密，如果找不到自己的key可以反向破解
 
