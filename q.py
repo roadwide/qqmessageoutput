@@ -35,7 +35,7 @@ class QQoutput():
                     # 如果大于ffff 处理emoji
                     if (unicode > 0xffff):
                         # 分为2个10位二进制与两个密码进行异或
-                        code = ( ( (unicode>>10) ^ ord(self.key[i+j % len(self.key)]) ) <<10 ) + ( (unicode&0x3FF) ^ ord(self.key[i+j+1 % len(self.key)]) )
+                        code = unicode ^ ((ord(self.key[i+j % len(self.key)])<<10) + ord(self.key[i+j+1 % len(self.key)]))
                         str += chr(code)
                         j = j + 1
                     else:
