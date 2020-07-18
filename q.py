@@ -28,8 +28,18 @@ class QQoutput():
         elif (mode == 1):
             str = ''
             try:
+                j = 0
                 for i in range(0, len(data)):
-                    str += chr(ord(data[i]) ^ ord(self.key[i % len(self.key)]))
+                    # 获取unicode码
+                    unicode = ord(data[i])
+                    # 如果大于ffff 处理emoji
+                    if (unicode > 0xffff):
+                        # 分为2个10位二进制与两个密码进行异或
+                        code = ( ( (unicode>>10) ^ ord(self.key[i+j % len(self.key)]) ) <<10 ) + ( (unicode&0x3FF) ^ ord(self.key[i+j+1 % len(self.key)]) )
+                        str += chr(code)
+                        j = j + 1
+                    else:
+                        str += chr(ord(data[i]) ^ ord(self.key[i+j % len(self.key)]))
             except:
                 str = NULL
             return str
