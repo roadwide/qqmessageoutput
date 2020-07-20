@@ -52,6 +52,8 @@ data\data\com.tencent.mobileqq\files\kc
 
 [2020-07-01]增加可能的其他解密key，感谢@[howyay](https://github.com/howyay)提供
 
+[2020-07-20]修复昵称中存在emoji的解密问题，感谢@[ctem049](https://github.com/ctem049)修复
+
 # ToDo
 
 - [ ] 自行解密key功能
