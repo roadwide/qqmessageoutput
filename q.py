@@ -17,6 +17,8 @@ class QQoutput():
         if (mode == 0):
             rowbyte = []
             # 这么做是为了解决汉字的utf-8是三字节
+            if data == None:
+                data=''
             for i in range(0, len(data)):
                 rowbyte.append(data[i] ^ ord(self.key[i % len(self.key)]))
             rowbyte = bytes(rowbyte)
