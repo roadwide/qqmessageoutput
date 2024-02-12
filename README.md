@@ -1,6 +1,10 @@
 # qqmessageoutput
 安卓QQ聊天记录导出/安卓QQ数据库解密
 
+# update
+把原作者的程序加了一个判定语句，防止消息为空时产生bug。
+在原作者的仓库上提交pr，原作者不理我……
+
 # Usage
 
 ```python
