@@ -58,6 +58,8 @@ data\data\com.tencent.mobileqq\files\kc
 
 [2020-07-20]修复昵称中存在emoji的解密问题，感谢@[ctem049](https://github.com/ctem049)修复
 
+[2023-06-10]修复聊天记录中存在空消息时解密的问题，感谢@[MuyuChen](https://github.com/Dengwen-Fu)修复
+
 # ToDo
 
 - [ ] 自行解密key功能
