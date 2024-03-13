@@ -1,6 +1,10 @@
 # qqmessageoutput
 安卓QQ聊天记录导出/安卓QQ数据库解密
 
+# update
+20240212：给程序加了一个判定语句，防止消息为空时产生bug。
+
+
 # Usage
 
 ```python
@@ -53,6 +57,8 @@ data\data\com.tencent.mobileqq\files\kc
 [2020-07-01]增加可能的其他解密key，感谢@[howyay](https://github.com/howyay)提供
 
 [2020-07-20]修复昵称中存在emoji的解密问题，感谢@[ctem049](https://github.com/ctem049)修复
+
+[2023-06-10]修复聊天记录中存在空消息时解密的问题，感谢@[MuyuChen](https://github.com/Dengwen-Fu)修复
 
 # ToDo
 
